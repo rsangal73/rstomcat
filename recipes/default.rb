@@ -20,6 +20,8 @@ end
 
 remote_file '/tmp/apache-tomcat-8.5.9.tar.gz' do
   source 'https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.9/bin/apache-tomcat-8.5.9.tar.gz'
+  not_if { File.exist?('/tmp/apache-tomcat-8.5.9.tar.gz' )}
+
 end
 
 #sudo mkdir /opt/tomcat
